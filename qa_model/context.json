@@ -1,32 +1,437 @@
 [
-  {
-    "context": "Hajj is the annual pilgrimage to Mecca and one of the Five Pillars of Islam. Every Muslim who is physically and financially capable must perform Hajj at least once in their lifetime."
-  },
-  {
-    "context": "Umrah is a pilgrimage to Mecca that can be undertaken at any time of the year. Unlike Hajj, Umrah is not obligatory but carries great spiritual rewards."
-  },
-  {
-    "context": "The rituals of Hajj include Ihram, Tawaf, Sa'i, standing at Arafat, Muzdalifah, and stoning the Jamarat. These rituals must be performed in order."
-  },
-  {
-    "context": "The rituals of Umrah include Ihram, Tawaf, and Sa'i between Safa and Marwah. Unlike Hajj, Umrah does not require standing at Arafat or stoning the Jamarat."
-  },
-  {
-    "context": "Ihram is a sacred state that Muslims enter to perform Hajj or Umrah. It includes specific spiritual practices and wearing special garments."
-  },
-  {
-    "context": "Tawaf is the act of circumambulating the Ka'aba seven times in a counterclockwise direction. It is a key ritual of both Hajj and Umrah."
-  },
-  {
-    "context": "Sa'i is the act of walking between the hills of Safa and Marwah seven times. It commemorates Hagar's search for water for her son, Ishmael."
-  },
-  {
-    "context": "Jamarat are three stone pillars in Mina that represent Satan. Pilgrims throw pebbles at them during Hajj to symbolize their rejection of evil."
-  },
-  {
-    "context": "Standing at Arafat is the most important ritual of Hajj. Pilgrims gather there to pray, repent, and seek forgiveness from Allah."
-  },
-  {
-    "context": "Muzdalifah is a place where pilgrims collect pebbles and pray after sunset on the day of Arafat. It is a significant part of the Hajj rituals."
-  }
+    {
+        "id": "001",
+        "context": "A woman must be accompanied by a mahram man (a male relative or her husband). If a woman has all the other conditions but cannot find such a person to accompany her and if she wants to perform hajj, she can perform hajj together with a group of reliable women; there is no need for false marriages to go to hajj.",
+        "question": "Can women go to hajj alone, without any mahram men?"
+    },
+    {
+        "id": "002",
+        "context": "As it is known, during the hajj season the devil is stoned in three places called Jamratul-Aqaba, Jamratus-Sughra and Jamratul-Wusta in Mina on the first, second and third days of Eid al-Adha. It is wajib. The acts carried out there are among the essentials of hajj. It is done to recall a nice reminiscence. The devil, who is the common enemy of the humankind, is stoned and damned.,Stoning is carried out in these places that were determined allegorically. That worshipping dates to Hazrat Ibrahim (pbuh).",
+        "question": "What is the Wisdom Behind Stoning the Devil?"
+    },
+    {
+        "id": "003",
+        "context": "There are professional laundry services, but not that many coin-operated launderettes. Detergent to wash your light clothing is also available in the local market nearby your hotels.",
+        "question": "Where can I wash my clothes?"
+    },
+    {
+        "id": "004",
+        "context": "If you are lost, there are 'Pilgrim Assistance Booths' set up all over and they will help you to find your hotel, tents, etc. Make sure you always have your ID card and your ID bracelet with you., If you are traveling with a group, it is advisable to agree on a well-known location/landmark to gather in case somebody gets lost.",
+        "question": "What do I do if I am lost? Where do I go for help?"
+    },
+    {
+        "id": "005",
+        "context": "For your own safety and that of others, please observe the following instructions when proceeding to the casting of the Jamarat: 1.Adherence to the schedules designated for you by the Mutawwif., 2.Adherence to the lanes designated for proceeding to the Jamarat and returning therefrom., 3.Avoid pushing your fellow pilgrims and proceed quietly and calmly., 4.Do not carry personal effects., 5.Do not walk against the direction of the traffic.",
+        "question": "How can I keep safe at Jamarat?"
+    },
+    {
+        "id": "006",
+        "context": "Hajj and Umrah visitors must have certificates for the following vaccinations before entering the Kingdom of Saudi Arabia: Meningococcal Meningitis, A certificate of vaccination against Meningococcal Meningitis is required from all visitors from all over the world arriving for the purpose of Umrah or Hajj. The certificate must have been issued not more than three years and not less than ten days before arrival to Saudi Arabia., Adults and children over the age of two years must receive the vaccination against meningococcal meningitis with the quadrivalent vaccine (serogroups A, C, Y and W135)., Children between 3 months and 2 years of age must be given two doses of the A vaccine with a 3-month interval between the two doses.",
+        "question": "Do I need any kind of vaccinations?"
+    },
+    {
+        "id": "007",
+        "context": "The Hajj is physically demanding and should be undertaken only by those who are fit enough to perform the rites. The Holy Quran makes it clear that only those who are physically and financially able are under an obligation to perform Hajj., That said, there are many disabled Muslims who wish to perform Hajj and, if adequate preparations are made, many can fulfil their wish. Below, we give some guidance, but it is imperative that any disabled person thinking of performing Hajj should consult in detail with their travel agent before making any bookings.: 1.Airport: There are facilities for the disabled at Jeddah airport. Your travel agent should ensure the airport staff are advised of your needs in advance., 2.Transport in the Kingdom: Buses are not equipped to handle wheelchairs. Disabled pilgrims must ensure that they or their carers have decided with private taxi firms for transportation in the Kingdom, either through your travel agent or through your service provider in the Kingdom., 3.Hotels: In general, hotels are not equipped for the disabled, except for some of the top hotels. Again, it is crucial that you check with the hotel before booking, to explain your needs and to ensure they can be met., 4.Grand Mosque in Makkah: The Grand Mosque is well-equipped for the disabled. It has escalators and ramps to enable wheelchairs to move easily from one level to another. Wheelchairs are provided free of charge in the Grand Mosque but, if you need to ask someone to push your wheelchair, the pusher will charge for his service., To make sure arrangements are adequate, always check with your travel agent before you set out for the Kingdom and with your service provider in the Kingdom.",
+        "question": "What are the facilities for disabled pilgrims?"
+    },
+    {
+        "id": "008",
+        "context": "You may either drink bottled mineral water or drink from water fountains available for drinking throughout the holy sites. Use of boiled or sterilized water is not a must. Zamzam water is always safe.",
+        "question": "Is the drinking water safe (Zamzam)?"
+    },
+    {
+        "id": "009",
+        "context": "Your passport will be taken from you after you enter Jeddah by the Unified Agents Office representatives, so that the latter can complete all travel formalities to Makkah and Madinah., If you lose your passport, you should immediately report it to the same office appointed to take care of you during Hajj (Field Service Group, FSG). You should obtain a report from the Unified Agents Office in which the loss of passport is mentioned. It is advisable to carry with you notarized copies of your passport.",
+        "question": "Where do I go if I lose my passport?"
+    },
+    {
+        "id": "0010",
+        "context": "Report any crime to the police and your Tawafa Establishment.",
+        "question": "If my money is stolen, where do I go for help? How do I report the crime?"
+    },
+    {
+        "id": "0011",
+        "context": "Dhu'l-Hulayfah: This miqat is about 9 kilometers from Madinah and about 450 kilometers from Makkah. Dhu'l-Hulayfah is the miqat for those who live in Madinah and for those who approach Makkah from that direction., Juhfah: This miqat is about 190 kilometers to the northwest of Makkah. This is the miqat for the people who come from the direction of Syria., Qarn al-Manazil: This miqat is a hilly place about 90 kilometers to the east of Makkah. This is the miqat for the people of Nejd or for those coming from that direction., Dhat Irq: This miqat is about 85 kilometers towards the northeast side of Makkah. This is the miqat for the people of Iran, Iraq and for those coming from that direction., Yalamlam: This miqat is a hilly area about 50 kilometers to the southeast of Makkah. This is the miqat for the people of Yemen and others coming from that direction. It is the miqat for many of the pilgrims from China, Japan, India, Pakistan who come by ship.",
+        "question": "Where are the locations of Miqaats?"
+    },
+    {
+        "id": "0012",
+        "context": "Pilgrimages serve various purposes, including spiritual renewal, seeking blessings or forgiveness, fulfilling religious obligations, seeking healing, or simply experiencing a sense of community and connection with others who share similar beliefs.",
+        "question": "What are the purposes of pilgrimage?"
+    },
+    {
+        "id": "0013",
+        "context": "Adult Muslims who are sane, able-bodied, and financially capable. Hajj is not required for children, the sick, or those who cannot afford it.",
+        "question": "Who is required to perform Hajj?"
+    },
+    {
+        "id": "0014",
+        "context": "Take 2-3 sets of Ihram, light and airy clothing, slippers, towels, a sleeping bag, inflatable pillow, and woolen clothing for cold mornings in winter.",
+        "question": "What clothing and bedding should I take for Hajj?"
+    },
+    {
+        "id": "0015",
+        "context": "The weather is hot in summer, reaching up to 40\u00b0C (100\u00b0F). Winters are mild, with cold mornings and nights.",
+        "question": "What is the weather like in Makkah and Madinah?"
+    },
+    {
+        "id": "example16",
+        "context": "The Saudi Riyal (SAR), pegged to the U.S. dollar, with 1 SAR equal to 0.2667 USD.",
+        "question": "What is the currency of Saudi Arabia?"
+    },
+    {
+        "id": "0017",
+        "context": "Makkah operates on UCT/GMT +3 hours. No daylight-saving time.",
+        "question": "What is the time difference in Makkah?"
+    },
+    {
+        "id": "0018",
+        "context": "Yes, banks exchange USD, GBP, Euro, and Dirham.",
+        "question": "Do banks in Saudi Arabia exchange foreign currencies?"
+    },
+    {
+        "id": "0019",
+        "context": "Tips include: Sincere intention, lawful expenses, paying debts, learning rules, ensuring family provisions, traveling with pious company, maintaining patience, and reflecting on Hajj\u2019s meanings.",
+        "question": "What are tips for an acceptable Hajj?"
+    },
+    {
+        "id": "0020",
+        "context": "Yes, Hajj is valid if performed on borrowed money, though borrowing should only be done if repayment is feasible.",
+        "question": "Is it permissible to go to Hajj by borrowing money?"
+    },
+    {
+        "id": "0021",
+        "context": "Hajj is an obligatory pilgrimage performed during Dhu al-Hijjah, while Umrah is a non-obligatory pilgrimage that can be done any time. Both strengthen spiritual devotion and unity among Muslims.",
+        "question": "What are Hajj and Umrah in Islam, and what is their significance?"
+    },
+    {
+        "id": "0022",
+        "context": "Hajj is significant as it symbolizes submission to Allah, spiritual purification, equality, and unity among Muslims.",
+        "question": "Why is Hajj significant in Islam, and what does it symbolize?"
+    },
+    {
+        "id": "0023",
+        "context": "'Fard' refers to obligatory acts that must be completed for the Hajj to be valid.",
+        "question": "What does 'Fard' mean in the context of Hajj?"
+    },
+    {
+        "id": "0024",
+        "context": "The conditions include being Muslim, having reached puberty, being mentally and physically sound, and financially capable.",
+        "question": "What are the basic conditions that make Hajj obligatory for a Muslim?"
+    },
+    {
+        "id": "0025",
+        "context": "A woman must have a Mahram (male guardian) or be part of a trusted group.",
+        "question": "What additional condition must a woman meet to perform Hajj?"
+    },
+    {
+        "id": "0026",
+        "context": "The pillars include entering Ihram, standing at Arafat, performing Tawaf, and Sa\u2019i.",
+        "question": "What are the pillars of Hajj?"
+    },
+    {
+        "id": "0027",
+        "context": "Entering Ihram signifies a state of spiritual purity, requiring ablutions, specific clothing, and the declaration of intention.",
+        "question": "What does entering Ihram signify, and what are its requirements?"
+    },
+    {
+        "id": "0028",
+        "context": "They recite supplications, perform Tawaf, and may attempt to touch or kiss the Black Stone.",
+        "question": "What do pilgrims do when they enter the Sacred Mosque?"
+    },
+    {
+        "id": "0029",
+        "context": "Standing at Arafat is a time for prayer, reflection, and seeking forgiveness. It is one of the most important days in Hajj.",
+        "question": "What is the significance of standing at Arafat during Hajj?"
+    },
+    {
+        "id": "0030",
+        "context": "Pilgrims combine prayers, collect pebbles, and spend the night in worship. The night symbolizes unity.",
+        "question": "What do pilgrims do at Muzdalifah, and what does this night symbolize?"
+    },
+    {
+        "id": "0031",
+        "context": "It represents the rejection of evil and commemorates Prophet Ibrahim's actions in warding off the devil.",
+        "question": "What does the stoning of the Jamarat represent?"
+    },
+    {
+        "id": "0032",
+        "context": "Tawaf represents the unity of believers in the worship of Allah.",
+        "question": "What does the ritual of Tawaf represent?"
+    },
+    {
+        "id": "0033",
+        "context": "Sa\u2019i commemorates Hajar's search for water and reflects faith, patience, and trust in Allah.",
+        "question": "What is the purpose of Sa\u2019i between Safa and Marwah?"
+    },
+    {
+        "id": "0034",
+        "context": "It represents spiritual renewal and the completion of the pilgrimage.",
+        "question": "What does shaving or cutting the hair represent at the end of Hajj or Umrah?"
+    },
+    {
+        "id": "0035",
+        "context": "The order includes Ihram, Tawaf, Sa\u2019i, standing at Arafat, Muzdalifah, and stoning the Jamarat.",
+        "question": "What is the order of rituals in Hajj?"
+    },
+    {
+        "id": "0036",
+        "context": "Tawaf al-Qudum is an arrival circumambulation performed upon reaching Makkah.",
+        "question": "What is Tawaf al-Qudum, and when is it performed?"
+    },
+    {
+        "id": "0037",
+        "context": "Tawaf al-Ifadah is the main Tawaf of Hajj, marking the fulfillment of key Hajj rituals.",
+        "question": "What is Tawaf al-Ifadah, and why is it important?"
+    },
+    {
+        "id": "0038",
+        "context": "Tawaf al-Wada is a farewell gesture symbolizing a pilgrim's departure from Makkah.",
+        "question": "What is the significance of Tawaf al-Wada?"
+    },
+    {
+        "id": "0039",
+        "context": "They help bring blessings and keep pilgrims focused on worship during each stage.",
+        "question": "Why are specific supplications recommended for each stage of Hajj?"
+    },
+    {
+        "id": "0040",
+        "context": "Staying at Muzdalifah emphasizes unity and allows pilgrims to collect pebbles for Mina.",
+        "question": "What is the purpose of staying at Muzdalifah?"
+    },
+    {
+        "id": "0041",
+        "context": "Staying overnight in Mina allows pilgrims to continue stoning the Jamarat, symbolizing the rejection of evil and reinforcing patience and discipline.",
+        "question": "What is the significance of staying overnight in Mina during Hajj?"
+    },
+    {
+        "id": "0042",
+        "context": "On the Day of Tarwiyah, pilgrims enter Ihram, pray at Mina, and prepare for the Day of Arafat.",
+        "question": "What happens on the Day of Tarwiyah?"
+    },
+    {
+        "id": "0043",
+        "context": "The order is essential to fulfill the requirements of Hajj properly.",
+        "question": "Why is the order of Hajj rituals important?"
+    },
+    {
+        "id": "0044",
+        "context": "Entering Ihram signifies beginning the pilgrimage with spiritual purity and devotion.",
+        "question": "What is the purpose of entering Ihram for Umrah?"
+    },
+    {
+        "id": "0045",
+        "context": "Tawaf symbolizes the unity of believers and their devotion to Allah.",
+        "question": "What does the Tawaf in Umrah symbolize?"
+    },
+    {
+        "id": "0046",
+        "context": "Sa\u2019i commemorates Hajar's search for water and symbolizes patience, faith, and trust in Allah.",
+        "question": "What does Sa\u2019i between Safa and Marwah commemorate?"
+    },
+    {
+        "id": "0047",
+        "context": "It symbolizes the pilgrim\u2019s humility, renewal, and the completion of Umrah.",
+        "question": "What does shaving or cutting the hair at the end of Umrah symbolize?"
+    },
+    {
+        "id": "0048",
+        "context": "Forbidden actions include cutting nails, wearing perfume, marital relations, hunting, and offensive language.",
+        "question": "What actions are forbidden during Ihram?"
+    },
+    {
+        "id": "0049",
+        "context": "Men should avoid sewn clothing and covering their heads, while women wear modest clothing without covering their faces or hands.",
+        "question": "What are the specific rules for men and women during Ihram?"
+    },
+    {
+        "id": "0050",
+        "context": "They must perform an expiation or Dam, which may involve fasting, charity, or sacrificing an animal.",
+        "question": "What must a pilgrim do if they violate the rules of Ihram?"
+    },
+    {
+        "id": "0051",
+        "context": "Penalties include sacrificing an animal, fasting, or giving charity, depending on the violation.",
+        "question": "What are the types of penalties for violating Ihram conditions?"
+    },
+    {
+        "id": "0052",
+        "context": "Penalties include offering a sacrifice or fasting, depending on the violation, to maintain the pilgrimage's validity.",
+        "question": "What penalties apply for specific violations during Hajj?"
+    },
+    {
+        "id": "0053",
+        "context": "They may fast for three days during Hajj and seven days upon returning home.",
+        "question": "What alternative does a pilgrim have if they cannot afford a sacrificial animal?"
+    },
+    {
+        "id": "0054",
+        "context": "Fasting on Arafah expiates sins from the past and upcoming year, offering spiritual renewal.",
+        "question": "Why is fasting on the Day of Arafah recommended for non-pilgrims?"
+    },
+    {
+        "id": "0055",
+        "context": "Fasting for three or more days may serve as an alternative penalty.",
+        "question": "What penalty is allowed if a pilgrim cannot offer charity or a sacrifice?"
+    },
+    {
+        "id": "0056",
+        "context": "Each prayer in the Prophet\u2019s Mosque is worth 1,000 prayers elsewhere.",
+        "question": "What is the reward for praying in the Prophet\u2019s Mosque?"
+    },
+    {
+        "id": "0057",
+        "context": "Pilgrims recite supplications for peace and blessings, acknowledging the sanctity of Madinah.",
+        "question": "What supplications are recommended upon entering Madinah?"
+    },
+    {
+        "id": "0058",
+        "context": "Pilgrims should maintain silence, offer greetings respectfully, and avoid raising their voices.",
+        "question": "What is the proper etiquette when visiting the Prophet\u2019s grave?"
+    },
+    {
+        "id": "0059",
+        "context": "Significant sites include Al-Baqi Cemetery and the Quba Mosque, both important for reflecting on Islamic history.",
+        "question": "What are some other significant sites to visit in Madinah?"
+    },
+    {
+        "id": "0060",
+        "context": "They help keep pilgrims spiritually focused and enhance the pilgrimage experience.",
+        "question": "Why are specific supplications recommended for each stage of Hajj?"
+    },
+    {
+        "id": "0061",
+        "context": "General prayers seek forgiveness, guidance, and blessings, helping strengthen spiritual connection and gratitude.",
+        "question": "What is the purpose of general prayers during Hajj and Umrah?"
+    },
+    {
+        "id": "0062",
+        "context": "Prayers honor the sacredness of the mosque and reinforce the pilgrim's connection to Islamic heritage.",
+        "question": "What is the purpose of reciting prayers when visiting the Prophet\u2019s Mosque?"
+    },
+    {
+        "id": "0063",
+        "context": "Hajj is not obligatory for children, and if performed, it does not count as their required pilgrimage; they must perform it again when they mature.",
+        "question": "Is Hajj obligatory for children, and can it count as their required pilgrimage?"
+    },
+    {
+        "id": "0064",
+        "context": "They may receive physical assistance, or a representative can perform Hajj on their behalf if needed.",
+        "question": "What provisions are available for elderly or disabled individuals performing Hajj?"
+    },
+    {
+        "id": "0065",
+        "context": "Women can perform Hajj without a Mahram if accompanied by a trusted group or under safe conditions.",
+        "question": "Under what conditions can women perform Hajj without a Mahram?"
+    },
+    {
+        "id": "0066",
+        "context": "Hajj absolves sins, allowing pilgrims to draw closer to Allah and renew their faith.",
+        "question": "How does Hajj serve as a form of spiritual purification?"
+    },
+    {
+        "id": "0067",
+        "context": "Hajj promotes unity and equality as all pilgrims wear similar garments and perform the same rituals.",
+        "question": "What aspects of Hajj promote unity and equality among Muslims?"
+    },
+    {
+        "id": "0068",
+        "context": "They strengthen bonds within the ummah, fostering understanding and respect among Muslims.",
+        "question": "How do Hajj and Umrah contribute to the Muslim community?"
+    },
+    {
+        "id": "0069",
+        "context": "Fasting on Arafah expiates sins from the past and upcoming year for non-pilgrims.",
+        "question": "What is the significance of fasting on the Day of Arafah for non-pilgrims?"
+    },
+    {
+        "id": "0070",
+        "context": "Qurbani commemorates Prophet Ibrahim\u2019s willingness to sacrifice in obedience to Allah and promotes charity.",
+        "question": "What is the purpose of Qurbani during Eid al-Adha?"
+    },
+    {
+        "id": "0071",
+        "context": "The Days of Tashreeq are for continued worship, stoning rituals, and reciting praises of Allah.",
+        "question": "What is the significance of the Days of Tashreeq in Hajj?"
+    },
+    {
+        "id": "0072",
+        "context": "Each prayer in the Grand Mosque is worth 100,000 prayers elsewhere.",
+        "question": "What is the benefit of praying in the Grand Mosque in Makkah?"
+    },
+    {
+        "id": "0073",
+        "context": "Jabal Al-Noor is where the Prophet received the first revelation in the Cave of Hira.",
+        "question": "What is the significance of Jabal Al-Noor in Makkah?"
+    },
+    {
+        "id": "0074",
+        "context": "Respect and patience create a peaceful environment and enhance the spiritual experience for all.",
+        "question": "Why is it important for pilgrims to show respect and patience during Hajj?"
+    },
+    {
+        "id": "0075",
+        "context": "Pilgrims should be courteous, avoid disruptions, and maintain harmony.",
+        "question": "How should pilgrims interact with others during Hajj?"
+    },
+    {
+        "id": "0076",
+        "context": "Pilgrims should avoid rushing, give way to others, and be mindful of fellow worshipers.",
+        "question": "What are some best practices for minimizing harm during crowded Hajj rituals?"
+    },
+    {
+        "id": "0077",
+        "context": "Pilgrims offer gratitude, ask for acceptance of their pilgrimage, and seek blessings.",
+        "question": "What supplications are recommended after completing Hajj or Umrah?"
+    },
+    {
+        "id": "0078",
+        "context": "Pilgrims express gratitude for spiritual growth and renew intentions for a pious life.",
+        "question": "What intentions do pilgrims express after completing Hajj or Umrah?"
+    },
+    {
+        "id": "0079",
+        "context": "Pilgrims ask for blessings, protection from misguidance, and a connection to the wider ummah.",
+        "question": "What additional prayers do pilgrims offer for family and community after Hajj?"
+    },
+    {
+        "id": "0080",
+        "context": "The Quba Mosque is the first mosque built in Islam by Prophet Muhammad, and praying two units there is said to hold the reward of an Umrah.",
+        "question": "What is the significance of the Quba Mosque in Madinah?"
+    },
+    {
+        "id": "0081",
+        "context": "Al-Baqi Cemetery is where many of the Prophet's family members and companions are buried, reminding Muslims of their contributions to Islam.",
+        "question": "Why is Al-Baqi Cemetery significant in Islam?"
+    },
+    {
+        "id": "0082",
+        "context": "Mount Uhud is significant as the site of the Battle of Uhud, where many companions, including the Prophet\u2019s uncle Hamza, were martyred.",
+        "question": "What is the significance of Mount Uhud in Islamic history?"
+    },
+    {
+        "id": "0083",
+        "context": "The Seven Mosques mark the positions of commanders during the Battle of the Trench, honoring the defense efforts of early Muslims.",
+        "question": "What is the historical significance of the Seven Mosques in Madinah?"
+    },
+    {
+        "id": "0084",
+        "context": "The Prophet's Mosque is the second holiest site in Islam, home to the Rawdah, and serves as the burial site of Prophet Muhammad.",
+        "question": "Why is the Prophet\u2019s Mosque in Madinah significant in Islam?"
+    },
+    {
+        "id": "0085",
+        "context": "Masjid al-Qiblatayn is where the Qibla was changed from Jerusalem to Makkah, symbolizing unity around the Kaaba.",
+        "question": "What is the historical significance of Masjid al-Qiblatayn?"
+    },
+    {
+        "id": "0086",
+        "context": "Hajj is the annual Islamic pilgrimage to the holy city of Mecca (Makkah) in Saudi Arabia. It is one of the Five Pillars of Islam, which are the core acts of worship and the foundation of a Muslim's faith and practices. Hajj is a mandatory religious duty for all adult Muslims who are physically and financially capable of undertaking the journey at least once in their lifetime.",
+        "question": "What is Hajj"
+    },
+    {
+        "id": "0087",
+        "context": "Umrah is a non-mandatory Islamic pilgrimage to the holy city of Mecca (Makkah) in Saudi Arabia. It is often referred to as the lesser pilgrimage compared to Hajj. While Hajj has specific timing and is obligatory for eligible Muslims, Umrah can be performed at any time of the year and is considered a highly recommended act of worship.",
+        "question": "What is Umrah"
+    }
 ]
