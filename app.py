@@ -3,7 +3,7 @@ import requests
 import logging
 import json
 from flask import Flask, request, jsonify
-from transformers import AutoTokenizer, AutoModelForQuestionAnswering, pipeline
+from transformers import RobertaForQuestionAnswering, RobertaTokenizerFast, pipeline
 from time import sleep
 
 # Configure logging
@@ -53,8 +53,8 @@ for file_name, file_url in model_files:
 
 # Load the tokenizer and model with error handling
 try:
-    tokenizer = AutoTokenizer.from_pretrained(model_dir)
-    model = AutoModelForQuestionAnswering.from_pretrained(model_dir)
+    tokenizer =  RobertaTokenizerFast.from_pretrained(model_dir)
+    model = RobertaForQuestionAnswering.from_pretrained(model_dir)
     logger.info("Model and tokenizer loaded successfully.")
 except Exception as e:
     logger.error("Error loading model or tokenizer:", exc_info=True)
@@ -74,7 +74,29 @@ except FileNotFoundError:
     contexts = []
 
 @app.route('/answer', methods=['POST'])
-def get_answer():
+def get_answer(question,dataset):
+    try:
+          for entry in dataset:
+            if question.lower() in entry["question"].lower():  # Simple matching based on question similarity
+                context = entry["context"]
+                break
+            else:
+                return "No matching context found in the dataset."
+
+    # Tokenize the input
+    inputs = tokenizer(question, context, return_tensors="pt", truncation=True, max_length=384)
+    
+    # Get model predictions
+    outputs = model(**inputs)
+    start_idx = outputs.start_logits.argmax()
+    end_idx = outputs.end_logits.argmax()
+    
+    # Decode the answer
+    answer = tokenizer.convert_tokens_to_string(
+        tokenizer.convert_ids_to_tokens(inputs['input_ids'][0][start_idx:end_idx + 1])
+    )
+    return answer
+
     data = request.json
     question = data.get("question", "")
     context_indices = data.get("context_indices", [])  # List of indices to use
@@ -92,16 +114,15 @@ def get_answer():
         except IndexError:
             return jsonify({"error": "Invalid context index"}), 400  # Return 400 Bad Request
     else:
-        selected_contexts = " ".join([ctx['context'] for ctx in contexts])  # Combine all contexts if none provided
+        selected_contexts = " ".join([ctx['context'] for ctx in contexts])  # Combine
 
-    try:
         # Get the answer using the QA pipeline
-        result = qa_pipeline(question=question, context=selected_contexts)
+        result = get_answer(question,selected_contexts)
         return jsonify({
             "question": question,
             "context": selected_contexts,
-            "answer": result['answer'],
-            "score": result['score']
+            "answer": result,
+    
         })
     except Exception as e:
         logger.error("Error during question answering:", exc_info=True)
