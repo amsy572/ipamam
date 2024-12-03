@@ -75,6 +75,10 @@ except FileNotFoundError:
 
 def get_answer(question, dataset):
     for entry in dataset:
+        if "question" not in entry or "context" not in entry:
+            logger.error("Entry missing required keys: %s", entry)
+            continue  # Skip entries with missing keys
+        
         if question.lower() in entry["question"].lower():  # Simple matching based on question similarity
             context = entry["context"]
             break
