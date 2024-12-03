@@ -75,13 +75,13 @@ except FileNotFoundError:
 
 @app.route('/answer', methods=['POST'])
 def get_answer(question,dataset):
-    try:
-          for entry in dataset:
-            if question.lower() in entry["question"].lower():  # Simple matching based on question similarity
-                context = entry["context"]
-                break
-            else:
-                return "No matching context found in the dataset."
+   
+    for entry in dataset:
+        if question.lower() in entry["question"].lower():  # Simple matching based on question similarity
+            context = entry["context"]
+            break
+    else:
+        return "No matching context found in the dataset."
 
     # Tokenize the input
     inputs = tokenizer(question, context, return_tensors="pt", truncation=True, max_length=384)
@@ -124,9 +124,9 @@ def get_answer(question,dataset):
             "answer": result,
     
         })
-    except Exception as e:
-        logger.error("Error during question answering:", exc_info=True)
-        return jsonify({"error": "An error occurred while processing the request"}), 500  # Return 500 Internal Server Error
+    # except Exception as e:
+    #     logger.error("Error during question answering:", exc_info=True)
+    #     return jsonify({"error": "An error occurred while processing the request"}), 500  # Return 500 Internal Server Error
 
 if __name__ == '__main__':
     # Run the Flask app
