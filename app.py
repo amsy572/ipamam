@@ -53,7 +53,7 @@ for file_name, file_url in model_files:
 
 # Load the tokenizer and model with error handling
 try:
-    tokenizer =  RobertaTokenizerFast.from_pretrained(model_dir)
+    tokenizer = RobertaTokenizerFast.from_pretrained(model_dir)
     model = RobertaForQuestionAnswering.from_pretrained(model_dir)
     logger.info("Model and tokenizer loaded successfully.")
 except Exception as e:
@@ -73,9 +73,7 @@ except FileNotFoundError:
     logger.error(f"Context file {context_file_path} not found.")
     contexts = []
 
-@app.route('/answer', methods=['POST'])
-def get_answer(question,dataset):
-   
+def get_answer(question, dataset):
     for entry in dataset:
         if question.lower() in entry["question"].lower():  # Simple matching based on question similarity
             context = entry["context"]
@@ -97,6 +95,8 @@ def get_answer(question,dataset):
     )
     return answer
 
+@app.route('/answer', methods=['POST'])
+def handle_request():
     data = request.json
     question = data.get("question", "")
     context_indices = data.get("context_indices", [])  # List of indices to use
@@ -108,25 +108,22 @@ def get_answer(question,dataset):
     if not contexts:
         return jsonify({"error": "No contexts available"}), 500  # Internal Server Error
 
+    # Select contexts based on provided indices
     if context_indices:
         try:
             selected_contexts = " ".join([contexts[i]['context'] for i in context_indices])
         except IndexError:
             return jsonify({"error": "Invalid context index"}), 400  # Return 400 Bad Request
     else:
-        selected_contexts = " ".join([ctx['context'] for ctx in contexts])  # Combine
+        selected_contexts = " ".join([ctx['context'] for ctx in contexts])  # Combine all contexts
 
-        # Get the answer using the QA pipeline
-        result = get_answer(question,selected_contexts)
-        return jsonify({
-            "question": question,
-            "context": selected_contexts,
-            "answer": result,
-    
-        })
-    # except Exception as e:
-    #     logger.error("Error during question answering:", exc_info=True)
-    #     return jsonify({"error": "An error occurred while processing the request"}), 500  # Return 500 Internal Server Error
+    # Get the answer using the QA function
+    result = get_answer(question, contexts)
+    return jsonify({
+        "question": question,
+        "context": selected_contexts,
+        "answer": result,
+    })
 
 if __name__ == '__main__':
     # Run the Flask app
