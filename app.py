@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 # GitHub repository URL for the model files
 model_repo_url = "https://github.com/amsy572/ipamam/raw/main/qa_model"
-model_dir = "/tmp/qa_model"  # Path to save downloaded model filesPath to save downloaded model files
+model_dir = "/tmp/qa_model"  # Path to save downloaded model files
 
 # Ensure the model directory exists
 os.makedirs(model_dir, exist_ok=True)
@@ -59,19 +59,25 @@ try:
 except Exception as e:
     logger.error("Error loading model or tokenizer:", exc_info=True)
     exit(1)  # Exit the application if loading fails
- # Exit the application if loading fails
 
 # Initialize QA pipeline
-qa_pipeline = pipeline("question-answering", model=model, tokenizer=tokenizer)
+try:
+    qa_pipeline = pipeline("question-answering", model=model, tokenizer=tokenizer)
+except Exception as e:
+    logger.error("Error initializing QA pipeline:", exc_info=True)
+    exit(1)
 
 # Load all contexts from the JSON file
-context_file_path = os.path.join(model_dir, "context.json")  # Path to your context JSON file
+context_file_path = os.path.join(model_dir, "context.json")
 try:
     with open(context_file_path, 'r', encoding='utf-8') as f:
         contexts = json.load(f)  # Load all contexts as a list
+    if not contexts or not all("question" in entry and "context" in entry for entry in contexts):
+        logger.error("Invalid context data format or empty contexts.")
+        raise ValueError("Invalid context data format or empty contexts.")
     logger.info("Loaded contexts successfully.")
-except FileNotFoundError:
-    logger.error(f"Context file {context_file_path} not found.")
+except (FileNotFoundError, ValueError) as e:
+    logger.error(f"Error loading context file {context_file_path}: {e}")
     contexts = []
 
 def get_answer(question, dataset):
@@ -102,33 +108,37 @@ def get_answer(question, dataset):
 
 @app.route('/answer', methods=['POST'])
 def handle_request():
-    data = request.json
-    question = data.get("question", "")
-    context_indices = data.get("context_indices", [])  # List of indices to use
+    try:
+        data = request.json
+        question = data.get("question", "")
+        context_indices = data.get("context_indices", [])  # List of indices to use
 
-    # Validate input
-    if not question:
-        return jsonify({"error": "Question is required"}), 400  # Return 400 Bad Request
+        # Validate input
+        if not question:
+            logger.warning("Received request with no question.")
+            return jsonify({"error": "Question is required"}), 400  # Return 400 Bad Request
 
-    # if not contexts:
-    #     return jsonify({"error": "No contexts available"}), 500  # Internal Server Error
+        # Select contexts based on provided indices
+        if context_indices:
+            try:
+                selected_contexts = " ".join([contexts[i]['context'] for i in context_indices])
+            except IndexError:
+                logger.error("Invalid context index provided.")
+                return jsonify({"error": "Invalid context index"}), 400  # Return 400 Bad Request
+        else:
+            selected_contexts = " ".join([ctx['context'] for ctx in contexts])  # Combine all contexts
 
-    # Select contexts based on provided indices
-    if context_indices:
-        try:
-            selected_contexts = " ".join([contexts[i]['context'] for i in context_indices])
-        except IndexError:
-            return jsonify({"error": "Invalid context index"}), 400  # Return 400 Bad Request
-    else:
-        selected_contexts = " ".join([ctx['context'] for ctx in contexts])  # Combine all contexts
-
-    # Get the answer using the QA function
-    result = get_answer(question, contexts)
-    return jsonify({
-        "question": question,
-        "context": selected_contexts,
-        "answer": result,
-    })
+        # Get the answer using the QA function
+        result = get_answer(question, contexts)
+        logger.info("Answer generation successful.")
+        return jsonify({
+            "question": question,
+            "context": selected_contexts,
+            "answer": result,
+        })
+    except Exception as e:
+        logger.error("Error processing request:", exc_info=True)
+        return jsonify({"error": "Internal server error"}), 500
 
 if __name__ == '__main__':
     # Run the Flask app
