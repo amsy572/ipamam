@@ -51,7 +51,7 @@ for file_name, file_url in model_files:
         logger.error(f"Failed to download {file_name} after 3 attempts.")
         exit(1)  # Exit if any model file fails to download
 
-Load the tokenizer and model with error handling
+# Load the tokenizer and model with error handling
 try:
     tokenizer = RobertaTokenizerFast.from_pretrained(model_dir)
     model = RobertaForQuestionAnswering.from_pretrained(model_dir)
@@ -59,6 +59,7 @@ try:
 except Exception as e:
     logger.error("Error loading model or tokenizer:", exc_info=True)
     exit(1)  # Exit the application if loading fails
+ # Exit the application if loading fails
 
 # Initialize QA pipeline
 qa_pipeline = pipeline("question-answering", model=model, tokenizer=tokenizer)
