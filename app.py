@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 # GitHub repository URL for the model files
 model_repo_url = "https://github.com/amsy572/ipamam/raw/main/qa_model"
-model_dir = "/tmp/qa_model"  # Path to save downloaded model files
+model_dir = "/tmp/qa_model"  # Path to save downloaded model filesPath to save downloaded model files
 
 # Ensure the model directory exists
 os.makedirs(model_dir, exist_ok=True)
@@ -51,7 +51,7 @@ for file_name, file_url in model_files:
         logger.error(f"Failed to download {file_name} after 3 attempts.")
         exit(1)  # Exit if any model file fails to download
 
-# Load the tokenizer and model with error handling
+Load the tokenizer and model with error handling
 try:
     tokenizer = RobertaTokenizerFast.from_pretrained(model_dir)
     model = RobertaForQuestionAnswering.from_pretrained(model_dir)
@@ -109,8 +109,8 @@ def handle_request():
     if not question:
         return jsonify({"error": "Question is required"}), 400  # Return 400 Bad Request
 
-    if not contexts:
-        return jsonify({"error": "No contexts available"}), 500  # Internal Server Error
+    # if not contexts:
+    #     return jsonify({"error": "No contexts available"}), 500  # Internal Server Error
 
     # Select contexts based on provided indices
     if context_indices:
@@ -131,4 +131,4 @@ def handle_request():
 
 if __name__ == '__main__':
     # Run the Flask app
-    app.run(host="0.0.0.0", port=5000, debug=False)
+    app.run(host="0.0.0.0", port=8000, debug=False)
